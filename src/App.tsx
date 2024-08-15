@@ -1,13 +1,13 @@
 
+import TicTacToeReact from "./Components/TicTacToeReact"
 import './App.css'
-import TicTacToeReact from './Components/TicTacToeReact'
 
 function App() {
 
 
   return (
     <div>
-       <TicTacToeReact />
+      <TicTacToeReact  />
     </div>
   )
 }

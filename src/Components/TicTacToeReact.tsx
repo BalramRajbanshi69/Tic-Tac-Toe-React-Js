@@ -1,12 +1,13 @@
 import { useState } from "react";
 
+
 export default function TicTacToeReact() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXTurn, setXTurn] = useState(true);
   const [winner, setWinner] = useState(null);
   const [draw,setDraw] = useState(false);
 
-  const rowSquare = (index) => {
+  const rowSquare = (index:number) => {
     return (
       <button className="square" onClick={() => handleClick(index)}>
         {board[index]}
@@ -14,7 +15,7 @@ export default function TicTacToeReact() {
     );
   };
 
-  function handleClick(index) {
+  function handleClick(index:number) {
     if (board[index] !== null){
       return; // square is already occupied  
     }
@@ -36,7 +37,7 @@ export default function TicTacToeReact() {
     setDraw(false);
   }
 
-  function checkWinner(newBoard) {
+  function checkWinner(newBoard:any[]) {
     const Combinations = [
       [0, 1, 2],
       [3, 4, 5],
